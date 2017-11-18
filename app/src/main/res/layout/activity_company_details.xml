@@ -13,6 +13,15 @@
         android:orientation="vertical"
         android:layout_margin="20dp">
 
+        <ImageView
+            android:id="@+id/companyLogo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/facehack"
+            android:layout_marginBottom="20dp"/>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -63,6 +72,7 @@
             android:layout_marginTop="40dp"
             android:text="Hiring Criteria"
             android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
             android:textColor="@color/red"/>
 
@@ -113,7 +123,6 @@
                 android:id="@+id/twentyone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onRadioItemClick"
                 android:text="21-25"
                 android:textColor="@color/black" />
 
@@ -121,7 +130,6 @@
                 android:id="@+id/twentyfive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onRadioItemClick"
                 android:text="26-30"
                 android:textColor="@color/black" />
 
@@ -129,7 +137,6 @@
                 android:id="@+id/thirtythree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onRadioItemClick"
                 android:text="31-35"
                 android:textColor="@color/black" />
 
@@ -137,7 +144,6 @@
                 android:id="@+id/thirtysix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onRadioItemClick"
                 android:text="36-40"
                 android:textColor="@color/black" />
         </RadioGroup>
@@ -160,33 +166,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Programming"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:textColor="@color/black" />
 
             <RadioButton
                 android:id="@+id/networking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Networking"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:textColor="@color/black" />
 
             <RadioButton
                 android:id="@+id/security"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cyber Security"
-                android:textColor="@color/black"
                 android:layout_marginTop="8dp"
-                android:onClick="onRadioItemClick"/>
+                android:text="Cyber Security"
+                android:textColor="@color/black" />
 
             <RadioButton
                 android:id="@+id/web"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Web Development"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:textColor="@color/black" />
         </RadioGroup>
 
         <Button
@@ -194,7 +196,8 @@
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
             android:text="Save Details"
             android:textStyle="bold" />
     </LinearLayout>
