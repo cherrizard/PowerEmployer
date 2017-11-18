@@ -29,14 +29,6 @@
             android:name=".CompanyDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".StudentViewPagerActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".CompanyViewPagerActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
 
         <service android:name=".AppFirebaseInstanceIDService">
             <intent-filter>
@@ -49,8 +41,7 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".StudentNotificationsActivity" />
-        <activity android:name=".CompanyNotificationsActivity"></activity>
+        <activity android:name=".StudentCompanyListActivity" />
     </application>
 
 </manifest>
