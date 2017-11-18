@@ -15,8 +15,6 @@
         android:layout_marginBottom="0dp"
         card_view:cardElevation="5dp"
         card_view:cardCornerRadius="4dp"
-        android:foreground="?attr/selectableItemBackground"
-        android:stateListAnimator="@animator/on_touch_animator"
         app:cardPreventCornerOverlap="false">
 
         <LinearLayout
