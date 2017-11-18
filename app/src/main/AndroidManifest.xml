@@ -24,11 +24,18 @@
         <activity
             android:name=".StudentDetailsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden"
+            android:label="Student Profile" />
         <activity
             android:name=".CompanyDetailsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden"
+            android:label="Company Profile"/>
+        <activity
+            android:name=".StudentCompanyListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:label="Companies Interested in You!"/>
 
         <service android:name=".AppFirebaseInstanceIDService">
             <intent-filter>
@@ -41,7 +48,7 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".StudentCompanyListActivity" />
+
     </application>
 
 </manifest>
