@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "320021149146",
+    "firebase_url": "https://facehack-a6121.firebaseio.com",
+    "project_id": "facehack-a6121",
+    "storage_bucket": "facehack-a6121.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320021149146:android:8691ce34ea0c582b",
+        "android_client_info": {
+          "package_name": "um.facehack.poweremployer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320021149146-bbtrt98emvg0iv08rf9g6g0vgkj93s0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "um.facehack.poweremployer",
+            "certificate_hash": "e13e46d635f921303f60d3f489e5673449dc09d8"
+          }
+        },
+        {
+          "client_id": "320021149146-pm6529n435d625lgh8di1l6d38f7v3lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrr5VEvTstqTSta7fWqhp3EVLXq2FmpLk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320021149146-pm6529n435d625lgh8di1l6d38f7v3lv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

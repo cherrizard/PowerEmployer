@@ -57,10 +57,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/signUpTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Or sign up here!"
             android:layout_marginTop="16dp"
+            android:text="Or sign up here!"
             android:textAlignment="center"
             android:textColor="@color/red" />
     </LinearLayout>
