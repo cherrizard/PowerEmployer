@@ -18,9 +18,9 @@
         </activity>
         <activity
             android:name=".SignUpActivity"
+            android:parentActivityName=".LoginActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden"
-            android:parentActivityName=".LoginActivity"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".StudentDetailsActivity"
             android:screenOrientation="portrait"
@@ -38,18 +38,25 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
 
-        <service
-            android:name=".AppFirebaseInstanceIDService">
+        <service android:name=".AppFirebaseInstanceIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name=".AppFirebaseMessagingService">
+        <service android:name=".AppFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <receiver
+            android:name=".SendNotificationStudentReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".DismissNotificationReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>

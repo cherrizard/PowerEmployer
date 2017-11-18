@@ -34,22 +34,23 @@ public class NetworkRequest {
         requestQueue = Volley.newRequestQueue(context);
     }
 
-    public void login(String email, String password, String token, final Handler.Callback studentCallback) {
+    public void login(String email, String password, String token, final Handler.Callback studentCallback, final Handler.Callback companyCallback) {
         String url = "http://192.168.70.97:8080/login?email=" + email + "&password=" + password + "&token=" + token;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+                Log.d(TAG, response.toString());
                 try {
                     if (response.getString("type").equals("Student")) {
                         CurrentUser.getInstance().setUser(Converter.jsonToStudent(response.getJSONObject("data")));
                         studentCallback.handleMessage(null);
                     } else {
                         CurrentUser.getInstance().setUser(Converter.jsonToCompany(response.getJSONObject("data")));
+                        companyCallback.handleMessage(null);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                Log.d(TAG, response.toString());
             }
         }, new Response.ErrorListener() {
             @Override
@@ -58,6 +59,23 @@ public class NetworkRequest {
             }
         });
         requestQueue.add(request);
+        requestQueue.start();
+    }
+
+    public void accept(Long studentId, Long companyId) {
+        String url = "http://192.168.70.97:8080/acceptStudent?studentId=" + studentId + "&companyId=" + companyId;
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.d(TAG, response.toString());
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
         requestQueue.start();
     }
 }

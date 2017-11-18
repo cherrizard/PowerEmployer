@@ -110,36 +110,36 @@
                 android:textSize="14dp" />
 
             <RadioButton
-                android:id="@+id/twenty"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
-
-            <RadioButton
                 android:id="@+id/twentyone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="21"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:onClick="onRadioItemClick"
+                android:text="21-25"
+                android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/twentytwo"
+                android:id="@+id/twentyfive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="22"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:onClick="onRadioItemClick"
+                android:text="26-30"
+                android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/twentythree"
+                android:id="@+id/thirtythree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:onClick="onRadioItemClick"
+                android:text="31-35"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/thirtysix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioItemClick"
+                android:text="36-40"
+                android:textColor="@color/black" />
         </RadioGroup>
 
         <RadioGroup

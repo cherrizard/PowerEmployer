@@ -9,6 +9,7 @@ public class User {
     protected Long id;
     protected String name;
     protected String email;
+    protected String telNo;
 
     public Long getId() {
         return id;
@@ -32,5 +33,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getTelNo() {
+        return telNo;
+    }
+
+    public void setTelNo(String telNo) {
+        this.telNo = telNo;
     }
 }

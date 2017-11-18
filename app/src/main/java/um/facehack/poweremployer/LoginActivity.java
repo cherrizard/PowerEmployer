@@ -58,7 +58,16 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     };
 
-                    NetworkRequest.getInstance().login(email, pass, token, studentCallback);
+                    Handler.Callback companyCallback = new Handler.Callback() {
+                        @Override
+                        public boolean handleMessage(Message message) {
+                            Intent intent = new Intent(getApplicationContext(), CompanyDetailsActivity.class);
+                            startActivity(intent);
+                            return false;
+                        }
+                    };
+
+                    NetworkRequest.getInstance().login(email, pass, token, studentCallback, companyCallback);
                 }
             }
         });

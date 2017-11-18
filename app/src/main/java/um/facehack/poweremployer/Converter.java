@@ -20,6 +20,7 @@ public class Converter {
         student.setEmail(jsonObject.getString("email"));
         student.setName(jsonObject.getString("name"));
         student.setAge(jsonObject.getInt("age"));
+        student.setTelNo(jsonObject.getString("telNo"));
         student.setGender(jsonObject.getBoolean("gender"));
         student.setCourse(jsonObject.getString("course"));
         JSONArray skillsArray = jsonObject.getJSONArray("skills");
@@ -36,7 +37,7 @@ public class Converter {
         company.setName(jsonObject.getString("name"));
         company.setAddress(jsonObject.getString("address"));
         company.setTelNo(jsonObject.getString("telNo"));
-        company.setAgeCriteria(new Pair<>(jsonObject.getInt("start"), jsonObject.getInt("endInclusive")));
+        company.setAgeCriteria(new Pair<>(jsonObject.getJSONObject("ageCriteria").getInt("first"), jsonObject.getJSONObject("ageCriteria").getInt("last")));
         company.setGenderCriteria(jsonObject.getBoolean("genderCriteria"));
         JSONArray skillsArray = jsonObject.getJSONArray("skillsCriteria");
         for (int i = 0; i < skillsArray.length(); i++) {

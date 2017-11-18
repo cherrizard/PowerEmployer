@@ -13,7 +13,6 @@ import java.util.Map;
 public class Company extends User {
 
     private String address;
-    private String telNo;
     private HashSet<String> skillsCriteria = new HashSet<>();
     private Pair<Integer, Integer> ageCriteria;
     private Boolean genderCriteria;
@@ -24,14 +23,6 @@ public class Company extends User {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getTelNo() {
-        return telNo;
-    }
-
-    public void setTelNo(String telNo) {
-        this.telNo = telNo;
     }
 
     public HashSet<String> getSkillsCriteria() {
