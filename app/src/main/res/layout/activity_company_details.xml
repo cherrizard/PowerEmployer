@@ -63,6 +63,7 @@
             android:layout_marginTop="40dp"
             android:text="Hiring Criteria"
             android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
             android:textColor="@color/red"/>
 
