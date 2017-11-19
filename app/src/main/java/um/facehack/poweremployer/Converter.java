@@ -16,14 +16,14 @@ public class Converter {
 
     public static Student jsonToStudent(JSONObject jsonObject) throws JSONException {
         Student student = new Student();
-        student.setId(jsonObject.getLong("id"));
+        student.setId(jsonObject.getString("id"));
         student.setEmail(jsonObject.getString("email"));
         student.setName(jsonObject.getString("name"));
-        student.setAge(jsonObject.getInt("age"));
+        student.setAge(jsonObject.getInt("student_age"));
         student.setTelNo(jsonObject.getString("telNo"));
-        student.setGender(jsonObject.getBoolean("gender"));
-        student.setCourse(jsonObject.getString("course"));
-        JSONArray skillsArray = jsonObject.getJSONArray("skills");
+        student.setGender(jsonObject.getString("student_gender").charAt(0));
+        student.setCourse(jsonObject.getString("student_course"));
+        JSONArray skillsArray = jsonObject.getJSONArray("student_skills");
         for (int i = 0; i < skillsArray.length(); i++) {
             student.getSkills().add(skillsArray.getString(i));
         }
@@ -32,17 +32,26 @@ public class Converter {
 
     public static Company jsonToCompany(JSONObject jsonObject) throws JSONException {
         Company company = new Company();
-        company.setId(jsonObject.getLong("id"));
+        company.setId(jsonObject.getString("id"));
         company.setEmail(jsonObject.getString("email"));
         company.setName(jsonObject.getString("name"));
-        company.setAddress(jsonObject.getString("address"));
+        company.setAddress(jsonObject.getString("company_address"));
         company.setTelNo(jsonObject.getString("telNo"));
-        company.setAgeCriteria(new Pair<>(jsonObject.getJSONObject("ageCriteria").getInt("first"), jsonObject.getJSONObject("ageCriteria").getInt("last")));
-        company.setGenderCriteria(jsonObject.getBoolean("genderCriteria"));
-        JSONArray skillsArray = jsonObject.getJSONArray("skillsCriteria");
+        company.setAgeCriteria(new Pair<>(jsonObject.getInt("company_age_lo_cri"), jsonObject.getInt("company_age_up_cri")));
+        company.setGenderCriteria(jsonObject.getString("company_gender_cri").charAt(0));
+        JSONArray skillsArray = jsonObject.getJSONArray("company_skills_cri");
         for (int i = 0; i < skillsArray.length(); i++) {
             company.getSkillsCriteria().add(skillsArray.getString(i));
         }
         return company;
+    }
+
+    public static StudentCompanyModel jsonToSCModel(JSONObject jsonObject) throws JSONException {
+        StudentCompanyModel model = new StudentCompanyModel();
+        model.setCompanyName(jsonObject.getString("name"));
+        model.setCompanyAddress(jsonObject.getString("address"));
+        model.setCompanyEmail(jsonObject.getString("email"));
+
+        return model;
     }
 }

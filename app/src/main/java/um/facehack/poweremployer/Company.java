@@ -15,7 +15,7 @@ public class Company extends User {
     private String address;
     private HashSet<String> skillsCriteria = new HashSet<>();
     private Pair<Integer, Integer> ageCriteria;
-    private Boolean genderCriteria;
+    private Character genderCriteria;
 
     public String getAddress() {
         return address;
@@ -41,11 +41,11 @@ public class Company extends User {
         this.ageCriteria = ageCriteria;
     }
 
-    public Boolean getGenderCriteria() {
+    public Character getGenderCriteria() {
         return genderCriteria;
     }
 
-    public void setGenderCriteria(Boolean genderCriteria) {
+    public void setGenderCriteria(Character genderCriteria) {
         this.genderCriteria = genderCriteria;
     }
 }

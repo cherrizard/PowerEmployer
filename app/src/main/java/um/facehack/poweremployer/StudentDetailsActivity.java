@@ -1,7 +1,10 @@
 package um.facehack.poweremployer;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class StudentDetailsActivity extends AppCompatActivity {
@@ -11,6 +14,7 @@ public class StudentDetailsActivity extends AppCompatActivity {
     private EditText ageEditText;
     private EditText phoneEditText;
     private EditText courseEditText;
+    private Button companyListButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +26,13 @@ public class StudentDetailsActivity extends AppCompatActivity {
         ageEditText = findViewById(R.id.age);
         phoneEditText = findViewById(R.id.phone);
         courseEditText = findViewById(R.id.course);
+        companyListButton = findViewById(R.id.company_list_button);
 
         Student student = (Student) CurrentUser.getInstance().getUser();
 
         nameEditText.setText(student.name);
 
-        if (student.getGender()) {
+        if (student.getGender() == 'M') {
             genderEditText.setText("Male");
         } else {
             genderEditText.setText("Female");
@@ -36,6 +41,14 @@ public class StudentDetailsActivity extends AppCompatActivity {
         ageEditText.setText(String.valueOf(student.getAge()));
         phoneEditText.setText(student.getTelNo());
         courseEditText.setText(student.getCourse());
+
+        companyListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StudentCompanyListActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

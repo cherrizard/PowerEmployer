@@ -15,13 +15,13 @@
 
             <ImageView
                 android:id="@+id/studentPhoto"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@drawable/morty"
+                android:layout_marginBottom="20dp"
                 android:layout_weight="0"
-                android:layout_marginBottom="20dp"/>
+                android:scaleType="center"
+                android:src="@drawable/morty" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -108,37 +108,33 @@
                     android:layout_marginTop="8dp"/>
 
                 <RadioButton
-                    android:id="@+id/programming"
+                    android:id="@+id/cSharp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Programming"
-                    android:textColor="@color/black"
-                    android:onClick="onRadioItemClick"/>
+                    android:text="C#"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
-                    android:id="@+id/networking"
+                    android:id="@+id/cPlusPlus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Networking"
-                    android:textColor="@color/black"
-                    android:onClick="onRadioItemClick"/>
+                    android:text="C++"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
-                    android:id="@+id/security"
+                    android:id="@+id/scala"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cyber Security"
+                    android:text="Scala"
                     android:textColor="@color/black"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onRadioItemClick"/>
+                    android:layout_marginTop="8dp"/>
 
                 <RadioButton
-                    android:id="@+id/web"
+                    android:id="@+id/android"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Web Development"
-                    android:textColor="@color/black"
-                    android:onClick="onRadioItemClick"/>
+                    android:text="Android"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <Button
@@ -151,22 +147,32 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/upload_button"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Upload images"
-                android:textStyle="bold" />
-
-            <Button
                 android:id="@+id/save_details_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="100dp"
                 android:text="Save Details"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/company_list_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Company List"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/logout_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="16dp"
+                android:text="Logout"
+                android:textStyle="bold"
+                android:textColor="@color/red"/>
         </LinearLayout>
 </ScrollView>

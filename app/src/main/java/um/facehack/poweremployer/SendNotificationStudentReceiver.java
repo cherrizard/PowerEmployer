@@ -13,10 +13,10 @@ public class SendNotificationStudentReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        Long studentId = intent.getLongExtra("studentId", -1L);
-        Long companyId = CurrentUser.getInstance().getUser().getId();
+        String name = intent.getStringExtra("name");
+        String companyId = CurrentUser.getInstance().getUser().getId();
 
-        NetworkRequest.getInstance().accept(studentId, companyId);
+        NetworkRequest.getInstance().accept(name, companyId);
 
         int notificationCode = intent.getIntExtra("notificationCode",-1);
         NotificationManager notiManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);

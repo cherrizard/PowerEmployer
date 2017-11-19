@@ -10,7 +10,7 @@ import java.util.List;
 public class Student extends User {
 
     private int age;
-    private Boolean gender;
+    private Character gender;
     private String course;
     private HashSet<String> skills = new HashSet<>();
 
@@ -22,11 +22,11 @@ public class Student extends User {
         this.age = age;
     }
 
-    public Boolean getGender() {
+    public Character getGender() {
         return gender;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(Character gender) {
         this.gender = gender;
     }
 

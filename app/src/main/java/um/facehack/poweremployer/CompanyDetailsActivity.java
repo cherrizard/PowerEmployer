@@ -29,7 +29,7 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         companyName.setText(company.getName());
         address.setText(company.getAddress());
         phone.setText(company.getTelNo());
-        if (company.getGenderCriteria()) {
+        if (company.getGenderCriteria() == 'M') {
             male.setChecked(true);
         } else {
             female.setChecked(true);

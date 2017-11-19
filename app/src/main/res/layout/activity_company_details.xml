@@ -94,16 +94,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:textColor="@color/black"/>
 
             <RadioButton
                 android:id="@+id/female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="Female"
-                android:textColor="@color/black"
-                android:onClick="onRadioItemClick"/>
+                android:textColor="@color/black" />
         </RadioGroup>
 
         <RadioGroup
@@ -123,18 +122,20 @@
                 android:id="@+id/twentyone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="21-25"
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/twentyfive"
+                android:id="@+id/twentysix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="false"
                 android:text="26-30"
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/thirtythree"
+                android:id="@+id/thirtyone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="31-35"
@@ -162,32 +163,34 @@
                 android:textSize="14dp" />
 
             <RadioButton
-                android:id="@+id/programming"
+                android:id="@+id/csharp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Programming"
+                android:text="C#"
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/networking"
+                android:id="@+id/cpp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Networking"
+                android:checked="true"
+                android:text="C++"
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/security"
+                android:id="@+id/scala"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Cyber Security"
+                android:checked="true"
+                android:text="Scala"
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/web"
+                android:id="@+id/android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Web Development"
+                android:checked="false"
+                android:text="Android"
                 android:textColor="@color/black" />
         </RadioGroup>
 
@@ -197,8 +200,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="100dp"
             android:text="Save Details"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/logout_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
+            android:text="Logout"
+            android:textStyle="bold"
+            android:textColor="@color/red"/>
     </LinearLayout>
 </ScrollView>

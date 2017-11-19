@@ -6,16 +6,16 @@ package um.facehack.poweremployer;
 
 public class User {
 
-    protected Long id;
+    protected String id;
     protected String name;
     protected String email;
     protected String telNo;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
